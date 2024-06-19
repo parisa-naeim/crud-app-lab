@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css">
+    <title>Create a Food</title>
+</head>
+
+<body>
+    <h1>Create a New Food!</h1>
+    <form action="/foods" method="post">
+        <div class="margin-bottom-10">
+            <label for="name" class="label-wide">Name:</label>
+            <input type="text" name="name" id="name" />
+        </div>
+
+        <div class="margin-bottom-10">
+            <label for="description" class="label-wide">Description:</label>
+            <input type="text" name="description" id="description" />
+        </div>
+
+        <div class="margin-bottom-10">
+            <label for="recipe" class="label-wide">Recipe:</label>
+            <input type="text" name="recipe" id="recipe" />
+        </div>
+
+
+        <div class="margin-bottom-10">
+            <label for="origin" class="label-wide">Origin:</label>
+            <input type="text" name="origin" id="origin" />
+        </div>
+
+        <div class="margin-bottom-10">
+            <label for="isVegetarian" class="label-wide">Is it vegetarian?</label>
+            <input type="checkbox" name="isVegetarian" id="isVegetarian" />
+        </div>
+
+
+        <button>Add Foods</button>
+        <a href="/foods/">Back to Foods</a>
+    </form>
+    
+
+</body>
+
+</html>
