@@ -1,8 +1,21 @@
 .label-wide {
   display: inline-block;
-  width: 100px;
+  width: 120px;
 }
 
 .margin-bottom-10 {
   margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.button {
+  display: inline-block;
+  border: 1px solid gray;
+  padding: 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
 }

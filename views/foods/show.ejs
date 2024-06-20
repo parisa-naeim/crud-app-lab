@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css">
     <title>Foods Index</title>
   </head>
   <body>
@@ -21,8 +22,8 @@
         </p> 
 
         <form action="/foods/<%=food._id%>?_method=DELETE" method="POST">
-            <button type="submit">Delete <%= food.name %></button>
-            <a href="/foods/<%= food._id %>/edit">Edit <%= food.name %></a>
+            <button type="submit" class="button">Delete <%= food.name %></button>
+            <a class="button" href="/foods/<%= food._id %>/edit">Edit <%= food.name %></a>
         </form>
   </body>
 </html>

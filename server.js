@@ -9,7 +9,7 @@ const Food = require("./models/food.js");
 
 const server = express();
 server.use(express.urlencoded({ extended: false }));
-server.use(methodOverride("_method")); // we use this prefix to change the method
+server.use(methodOverride("_method"));
 server.use(express.static("public"));
 server.use(morgan("dev"));
 
@@ -56,8 +56,8 @@ server.delete("/foods/:id", async (req, res) => {
   await Food.findByIdAndDelete(req.params.id);
   res.redirect("/foods");
 });
-//Edit
 
+//Edit
 server.get("/foods/:id/edit", async (req, res) => {
   const foundFood = await Food.findById(req.params.id);
   res.render("foods/edit.ejs", {
@@ -66,7 +66,6 @@ server.get("/foods/:id/edit", async (req, res) => {
 });
 
 //Update
-
 server.put("/foods/:id", async (req, res) => {
   if (req.body.isVegetarian === "on") {
     req.body.isVegetarian = true;

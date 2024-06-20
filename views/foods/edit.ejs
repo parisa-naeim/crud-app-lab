@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css">
     <title>Edit a Food</title>
 </head>
 
@@ -11,36 +12,37 @@
     <h1>Edit <%= food.name %></h1>
 
         <form action="/foods/<%=food._id%>?_method=PUT" method="POST">
-        <div>
-            <label for="name">Name:</label>
+        <div class="margin-bottom-10">
+            <label for="name" class="label-wide">Name:</label>
             <input type="text" name="name" id="name" value="<%= food.name %>"  />
         </div>
 
-        <div>
-            <label for="description">description:</label>
+        <div class="margin-bottom-10">
+            <label for="description" class="label-wide">description:</label>
             <input type="text" name="description" id="description" value="<%= food.description %>" />
         </div>
 
-        <div>
-            <label for="recipe">recipe:</label>
+        <div class="margin-bottom-10">
+            <label for="recipe" class="label-wide">recipe:</label>
             <input type="text" name="recipe" id="recipe" value="<%= food.recipe %>"/>
         </div>
 
 
-        <div>
-            <label for="origin">origin:</label>
+        <div class="margin-bottom-10">
+            <label for="origin" class="label-wide">origin:</label>
             <input type="text" name="origin" id="origin" value="<%= food.origin %>"/>
         </div>
 
-        <div>
-            <label for="isVegetarian">Is it vegetarian?</label>
+        <div class="margin-bottom-10">
+            <label for="isVegetarian" class="label-wide">Is it vegetarian?</label>
             <input type="checkbox" name="isVegetarian" id="isVegetarian" <% if (food.isVegetarian) { %>checked<% }%> />
         </div>
 
 
-        <button >Update Food</button>
+        <button class="button">Update Food</button>
+        <a href="/foods/" class="button">Back to Foods</a>
     </form>
-    <a href="/foods/">Back to Foods</a>
+    
 
 </body>
 
